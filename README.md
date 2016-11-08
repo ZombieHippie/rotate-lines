@@ -1,12 +1,12 @@
-Group Traits
+Rotate lines
 ============
-[![Build Status](https://travis-ci.org/ZombieHippie/group-traits.svg?branch=master)](https://travis-ci.org/ZombieHippie/group-traits)
 
-This is an algorithm which divides up objects in groups based on their similar traits.
+This is a observation rotation utility (at least that is what I'm rotating).
 
-## Metamorphic Testing
+See [`./src/main.ts`](./src/main.ts) reads the `./in.txt` file and then
+rotates its lines by parts, and generates the `./out/n*.txt` and testing
+`./out/n*t.txt` files when we run `npm test`.
 
-This project's goal is to demonstrate Metamorphic testing on this domain by modifying the test oracles provided in the `./test/cases` directory.
+## Development
 
-The gist of metamorphic testing, is that we modify the existing test oracles in way which are randomized in ways which have predictable consequences.
-For example, if we have a group which is entirely single traits of `1`, then adding the trait `2` to one of the objects randomly, we should recieve the same output.
+Use `npm run test:watch` to automatically rerun the test command to check the output.
