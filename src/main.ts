@@ -9,6 +9,8 @@ const rot = Rotator.fromString(contents, 11)
 
 rot.getRotations()
     .forEach((r, i) => {
-        let fm = r.toFormatString()
+        let t = r.slice(0, 1).toFormatString()
+        writeFileSync(`out/n${i}t.txt`, t, 'utf8')
+        let fm = r.slice(1).toFormatString()
         writeFileSync(`out/n${i}.txt`, fm, 'utf8')
     })

@@ -21,12 +21,12 @@ class Rotator {
         return indexes
     }
 
-    slice(start: number, end?: number): string[][] {
-        return this.groups.slice(start, end)
+    slice(start: number, end?: number): Rotator {
+        return new Rotator(this.groups.slice(start, end))
     }
 
     rotate(): Rotator {
-        return new Rotator([...this.slice(1), ...this.slice(0, 1)])
+        return new Rotator([...this.slice(1).groups, ...this.slice(0, 1).groups])
     }
 
     getRotations() {
