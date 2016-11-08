@@ -1,0 +1,10 @@
+language: node_js
+dist: trusty
+node_js:
+  - "6"
+
+# Read more here: https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-a-GUI
+install:
+  - npm install
+
+script: npm test
